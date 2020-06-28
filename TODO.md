@@ -2,7 +2,7 @@
 Creating a Python Flask Web Service for controlling different "Profiles" of a given Monitor set up:
 
 * [x] Set up machine for Python Development
-* [ ] Create Initial Flask app with single hello world endpoint
+* [x] Create Initial Flask app with single hello world endpoint
 * [ ] Create POC for running bash command from a given endpoint call
 * [ ] Architect the API
     * [ ] Create the Data Model for a Profile
