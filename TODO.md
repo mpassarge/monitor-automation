@@ -4,7 +4,6 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
 * [x] Set up machine for Python Development
 * [x] Create Initial Flask app with single hello world endpoint
 * [x] Create POC for running bash command from a given endpoint call
-* [ ] Over USB possible, otherwise need 1 male to n female splitter. Or USB 1 to n splitter
 * [ ] Architect the API
     * [ ] Create the Data Model for a Profile
         * [ ] Way to order monitors (1,2,3 isn't necessarilly in that order all the time)?
@@ -16,4 +15,3 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
     * [ ] Create the POST endpoint for setting a given Profile
     * [ ] Create the GET endpoint for retrieving the given Profile currently set
 * [ ] Create frontend GUI **(OPTIONAL)** vs. MACRO Button...? 
- 
