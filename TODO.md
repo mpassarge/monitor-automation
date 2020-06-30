@@ -1,9 +1,8 @@
 
 Creating a Python Flask Web Service for controlling different "Profiles" of a given Monitor set up:
 
-* [x] Set up machine for Python Development
-* [x] Create Initial Flask app with single hello world endpoint
-* [x] Create POC for running bash command from a given endpoint call
+* [ ] Create Initial express app with single hello world endpoint
+* [ ] Create POC for running bash command from a given endpoint call
 * [ ] Architect the API
     * [ ] Create the Data Model for a Profile
         * [ ] Way to order monitors (1,2,3 isn't necessarilly in that order all the time)?
