@@ -3,14 +3,20 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
 
 * [x] Create Initial express app with single hello world endpoint
 * [ ] Create POC for running bash command from a given endpoint call
-* [ ] Architect the API
-    * [ ] Create the Data Model for a Profile
-        * [ ] Way to order monitors (1,2,3 isn't necessarilly in that order all the time)?
-        * [ ] Way to identify specific monitors?
-    * [ ] Configuration file on host vs ability to CRUD Profiles through API
-    * [ ] Create the POST endpoint for creating a Profile
-    * [ ] Create the GET endpoint for retrieving information on all the Profiles
-    * [ ] Create the GET endpoint for retrieving information of a given Profile
-    * [ ] Create the POST endpoint for setting a given Profile
-    * [ ] Create the GET endpoint for retrieving the given Profile currently set
+* [x] Architect the API for monitor-ws
+    * [x] Create the Data Model for a Profile
+        * [x] Way to order monitors (1,2,3 isn't necessarilly in that order all the time)?
+        * [x] Way to identify specific monitors? (serial-number)
+* [ ] Implement GET endpoint for '/monitor' of monitor-ws
+* [ ] Implement ddcutil implementation for GET '/monitor' of monitor-ws
+* [ ] Implement PATCH endpoint for '/monitor' of monitor-ws
+* [ ] Implement ddcutil implementation for PATCH '/monitor' of monitor-ws
+* [ ] Create Initial express app with single hello world endpoint for monitor-controller
+* [ ] Implement GET endpoint for '/monitors' of monitor-controller-ws
+* [ ] Implement underlying REST calls for GET '/monitors' of monitor-controller-ws
+* [ ] Implement GET endpoint for '/monitors/:id' of monitor-controller-ws
+* [ ] Implement underlying REST calls for GET '/monitors/:id' of monitor-controller-ws
+* [ ] Implement PATCH endpoint for '/monitors' of monitor-controller-ws
+* [ ] Implement underlying REST calls for PATCH '/monitors' of monitor-controller-ws
+* [ ] Registration of monitor ws to monitor controller ws???
 * [ ] Create frontend GUI **(OPTIONAL)** vs. MACRO Button...? 
