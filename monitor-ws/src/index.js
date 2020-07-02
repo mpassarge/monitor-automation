@@ -6,7 +6,7 @@ const app = express();
 
 app.use(morgan('common'));
 
-app.use('/monitors', routes);
+app.use('/monitor', routes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
