@@ -15,8 +15,8 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 - `200 OK ` on success
 ```json
 {
-    "id": 1
-    "serial-number": "ABCD1234"
+    "id": 1,
+    "serialNumber": "ABCD1234",
     "configuration": {
         "source": "HDMI 1"
     }
@@ -38,8 +38,8 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 - `200 OK ` on success
 ```json
 {
-    "id": 2
-    "serial-number": "ABCD1234"
+    "id": 2,
+    "serialNumber": "ABCD1234",
     "configuration": {
         "source": "HDMI 2"
     }
@@ -55,15 +55,15 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 ```json
 [
     {
-        "id": 1
-        "serial-number": "ABCD1234"
+        "id": 1,
+        "serialNumber": "ABCD1234",
         "configuration": {
             "source": "HDMI 1"
         }
     },
     {
-    "id": 2
-        "serial-number": "ABCD1234"
+    "id": 2,
+        "serialNumber": "ABCD1234",
         "configuration": {
             "source": "HDMI 2"
         }
@@ -76,8 +76,8 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 **Response**
 ```json
 {
-    "id": 1
-    "serial-number": "ABCD1234"
+    "id": 1,
+    "serialNumber": "ABCD1234",
     "configuration": {
         "source": "HDMI 1"
     }
@@ -99,8 +99,8 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 ```json
 {
     {
-        "id": 1
-        "serial-number": "ABCD1234"
+        "id": 1,
+        "serialNumber": "ABCD1234",
         "configuration": {
             "source": "DisplayPort1"
         }
