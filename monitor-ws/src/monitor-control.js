@@ -9,9 +9,10 @@ const sourceMap = {
 
 exports.getInfo = function() {
     const source = sourceMap[parseSource(ddc.getSource())];
+    const serialNumber = parseSerialNumber(ddc.getSerialNumber());
     return {
         "id": 1,
-        "serialNumber": "ABCD1234",
+        "serialNumber": serialNumber,
         "configuration": {
             "source": source
         }
@@ -19,5 +20,9 @@ exports.getInfo = function() {
 };
 
 function parseSource(source) {
-    return source.match(/.*\(sl=0x([a-f0-9]{2})\)/)[1];
+    return source.match(/sl=0x([a-f0-9]{2})\)/)[1];
+}
+
+function parseSerialNumber(serialNumber) {
+    return serialNumber.match(/Serial number:\ +([A-Z0-9]+)\n/)[1];
 }
