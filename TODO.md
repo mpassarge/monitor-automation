@@ -7,7 +7,7 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
     * [x] Create the Data Model for a Profile
         * [x] Way to order monitors (1,2,3 isn't necessarilly in that order all the time)?
         * [x] Way to identify specific monitors? (serialNumber)
-* [ ] Implement GET endpoint for '/monitor' of monitor-ws
+* [x] Implement GET endpoint for '/monitor' of monitor-ws
 * [ ] Implement ddcutil implementation for GET '/monitor' of monitor-ws
 * [ ] Implement PATCH endpoint for '/monitor' of monitor-ws
 * [ ] Implement ddcutil implementation for PATCH '/monitor' of monitor-ws
