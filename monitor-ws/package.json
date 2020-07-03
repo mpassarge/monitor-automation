@@ -4,7 +4,7 @@
   "description": "A web service for handling settings of a particular monitor",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
+    "dev": "env MONITOR_ID=1 nodemon src/index.js",
     "run": "node src/index.js"
   },
   "author": "Michael Passarge",

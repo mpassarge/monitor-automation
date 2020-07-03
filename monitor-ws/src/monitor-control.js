@@ -1,5 +1,6 @@
 const ddc = require('./display-data-channel');
 
+const monitor_id = Number(process.env.MONITOR_ID);
 const sourceMap = {
     '0f': 'DisplayPort-1',
     '10': 'DisplayPort-2',
@@ -11,7 +12,7 @@ exports.getInfo = function() {
     const source = sourceMap[parseSource(ddc.getSource())];
     const serialNumber = parseSerialNumber(ddc.getSerialNumber());
     return {
-        "id": 1,
+        "id": monitor_id,
         "serialNumber": serialNumber,
         "configuration": {
             "source": source
