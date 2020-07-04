@@ -14,12 +14,14 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
 * [X] Implement ddcutil implementation for PATCH '/monitor' of monitor-ws for dev
 * [x] Implement ddcutil implementation for PATCH '/monitor' of monitor-ws for prod
 * [x] Create Initial express app with single hello world endpoint for monitor-controller
+* [ ] Implement POST endpoint for '/registrations' of monitor-controller-ws
+* [x] Implement GET endpoint for '/registrations' of monitor-controller-ws
 * [ ] Implement GET endpoint for '/monitors' of monitor-controller-ws
-* [ ] Implement POST endpoint for '/registration' of monitor-controller-ws
 * [ ] Implement underlying REST calls for GET '/monitors' of monitor-controller-ws
 * [ ] Implement GET endpoint for '/monitors/:id' of monitor-controller-ws
 * [ ] Implement underlying REST calls for GET '/monitors/:id' of monitor-controller-ws
 * [ ] Implement PATCH endpoint for '/monitors' of monitor-controller-ws
 * [ ] Implement underlying REST calls for PATCH '/monitors' of monitor-controller-ws
+* [ ] Implement error handling middleware for monitor-ws
 * [ ] Registration of monitor ws to monitor controller ws???
 * [ ] Create frontend GUI **(OPTIONAL)** vs. MACRO Button...? 
