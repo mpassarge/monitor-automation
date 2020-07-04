@@ -1,8 +1,35 @@
 const routes = require('express').Router();
-const getInfo = require('./monitor-control').getInfo;
+const monitorControl = require('./monitor-control');
 
 routes.get('/', (req, res) => {
-    res.json(getInfo());
+    res.json(monitorControl.getInfo());
+});
+
+
+routes.patch('/', (req, res) => {
+
+    if(req.body == undefined) {
+        res.status(400).json({ message: 'No body' });
+        return;
+    }
+
+    const configuration = req.body.configuration;
+    
+    if(configuration == undefined) {
+        res.status(400).json({ message: 'No Configuration' });
+        return;
+    }
+
+    try {
+        if(configuration.source != null || undefined) {
+            monitorControl.updateSource(configuration.source);
+        }
+    } catch(err) {
+        res.status(500).json({ message: err.message });
+        return;
+    }
+
+    res.json(monitorControl.getInfo());
 });
 
 module.exports = routes;

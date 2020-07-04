@@ -28,3 +28,12 @@ exports.getSerialNumber = function() {
     }
     return serialNumberString;
 }
+
+exports.setSource = function(sourceHexValue) {
+    if(prod) {
+        // will run ddcutil setvcp 60 source
+        // will throw error if issues running command
+    } else {
+        //do nothing
+    }
+}
