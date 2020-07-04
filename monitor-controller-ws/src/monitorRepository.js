@@ -3,6 +3,8 @@ const monitorIdToUrlMap = {
     2: 'http://monitor-2'
 }
 
+// TODO: Have Monitor Class to return not create json on each return
+
 exports.addMonitor = function(id, monitorUrl) {
 
     if(monitorIdToUrlMap[id]) {
@@ -32,5 +34,13 @@ exports.getAllMonitors = function() {
 }
 
 exports.getMonitorById = function(id) {
-    throw new Error('Not supported!')
+    if(!monitorIdToUrlMap[id]) {
+        // TODO: Should be 404 error not 500
+        throw new Error('Monitor not found');
+    }
+
+    return {
+        "id": id,
+        "monitorUrl": monitorIdToUrlMap[id]
+    }
 }

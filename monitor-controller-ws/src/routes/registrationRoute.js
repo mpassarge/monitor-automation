@@ -5,6 +5,10 @@ router.get('/', (req, res) => {
     res.json(repository.getAllMonitors());
 });
 
+router.get('/:id', (req, res) => {
+    res.json(repository.getMonitorById(req.params.id));
+});
+
 router.post('/', (req, res) => {
 
     // TODO: Validation of req
