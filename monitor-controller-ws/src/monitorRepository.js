@@ -3,8 +3,20 @@ const monitorIdToUrlMap = {
     2: 'http://monitor-2'
 }
 
-exports.addMonitor = function(id, monitor) {
-    throw new Error('Not supported!')
+exports.addMonitor = function(id, monitorUrl) {
+
+    if(monitorIdToUrlMap[id]) {
+        // TODO: Should be 409 error not 500
+        throw new Error('Monitor already added')
+    }
+
+    // TODO: URL validation
+    monitorIdToUrlMap[id] = monitorUrl
+
+    return {
+        "id": id,
+        "monitorUrl": monitorUrl
+    };
 }
 
 exports.getAllMonitors = function() {
@@ -20,5 +32,5 @@ exports.getAllMonitors = function() {
 }
 
 exports.getMonitorById = function(id) {
-
+    throw new Error('Not supported!')
 }

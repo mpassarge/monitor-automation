@@ -14,8 +14,11 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
 * [X] Implement ddcutil implementation for PATCH '/monitor' of monitor-ws for dev
 * [x] Implement ddcutil implementation for PATCH '/monitor' of monitor-ws for prod
 * [x] Create Initial express app with single hello world endpoint for monitor-controller
-* [ ] Implement POST endpoint for '/registrations' of monitor-controller-ws
+* [x] Implement POST endpoint for '/registrations' of monitor-controller-ws
+    * [x] Can add monitor to repo
+    * [x] Error if trying to add monitor already added
 * [x] Implement GET endpoint for '/registrations' of monitor-controller-ws
+* [ ] Implement GET endpoint for '/registrations/:id' of monitor-controller-ws
 * [ ] Implement GET endpoint for '/monitors' of monitor-controller-ws
 * [ ] Implement underlying REST calls for GET '/monitors' of monitor-controller-ws
 * [ ] Implement GET endpoint for '/monitors/:id' of monitor-controller-ws
@@ -23,5 +26,7 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
 * [ ] Implement PATCH endpoint for '/monitors' of monitor-controller-ws
 * [ ] Implement underlying REST calls for PATCH '/monitors' of monitor-controller-ws
 * [ ] Implement error handling middleware for monitor-ws
-* [ ] Registration of monitor ws to monitor controller ws???
+* [ ] Implement Polling from monitor-controller-ws to monitor-ws to see if online/available???
+    * [ ] If not online remove from repo
+* [ ] Implement ability to add status codes in Error class???
 * [ ] Create frontend GUI **(OPTIONAL)** vs. MACRO Button...? 
