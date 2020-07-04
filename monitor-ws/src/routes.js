@@ -2,7 +2,11 @@ const routes = require('express').Router();
 const monitorControl = require('./monitor-control');
 
 routes.get('/', (req, res) => {
-    res.json(monitorControl.getInfo());
+    try {
+        res.json(monitorControl.getInfo());
+    } catch(err){
+        res.status(500).json({ message: err.message });
+    }
 });
 
 

@@ -9,10 +9,10 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
         * [x] Way to identify specific monitors? (serialNumber)
 * [x] Implement GET endpoint for '/monitor' of monitor-ws
 * [x] Implement ddcutil implementation for GET '/monitor' of monitor-ws for dev
-* [ ] Implement ddcutil implementation for GET '/monitor' of monitor-ws for prod
+* [x] Implement ddcutil implementation for GET '/monitor' of monitor-ws for prod
 * [x] Implement PATCH endpoint for '/monitor' of monitor-ws
 * [X] Implement ddcutil implementation for PATCH '/monitor' of monitor-ws for dev
-* [ ] Implement ddcutil implementation for PATCH '/monitor' of monitor-ws for prod
+* [x] Implement ddcutil implementation for PATCH '/monitor' of monitor-ws for prod
 * [ ] Create Initial express app with single hello world endpoint for monitor-controller
 * [ ] Implement GET endpoint for '/monitors' of monitor-controller-ws
 * [ ] Implement underlying REST calls for GET '/monitors' of monitor-controller-ws

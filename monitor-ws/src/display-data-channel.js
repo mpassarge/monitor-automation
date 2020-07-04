@@ -1,10 +1,17 @@
-const fs = require('fs');
+const { exec } = require('child_process');
+
 const prod = process.env.PROD;
 
 exports.getSource = function() {
     let sourceString = "";
     if(prod) {
-        // Will run ddcutil getvcp 60
+        exec('ddcutil getvcp 60', (err, stdout, stderr) => {
+            if(err) {
+                throw new Error('Error retrieving Source');
+            } else {
+                sourceString = stdout;
+            }
+        });
     } else {
         sourceString = "VCP code 0x60 (Input Source                  ): DisplayPort-1 (sl=0x0f)";
     }
@@ -12,11 +19,17 @@ exports.getSource = function() {
 }
 
 exports.getSerialNumber = function() {
-    let serialNumberString = "";
+    let detectString = "";
     if(prod) {
-        // Will run ddcutil detect
+        exec('ddcutil detect', (err, stdout, stderr) => {
+            if(err){
+                throw new Error('Error receiving seriel number');
+            } else {
+                detectString = stdout;
+            }
+        });
     } else {
-        serialNumberString = `Display 1
+        detectString = `Display 1
         I2C bus:             /dev/i2c-2
         EDID synopsis:
            Mfg id:           DEL
@@ -26,13 +39,16 @@ exports.getSerialNumber = function() {
            EDID version:     1.3
         VCP version:         2.1`;
     }
-    return serialNumberString;
+    return detectString;
 }
 
 exports.setSource = function(sourceHexValue) {
     if(prod) {
-        // will run ddcutil setvcp 60 source
-        // will throw error if issues running command
+        exec(`ddcutil setvcp 60 ${sourceHexValue}`, (err, stdout, stderr) => {
+            if(err) {
+                throw new Error('Error setting source');
+            }
+        });
     } else {
         //do nothing
     }
