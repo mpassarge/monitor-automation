@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const registrationRoutes = require('./routes/registrationRoute');
+const monitorRoutes = require('./routes/monitorsRoute');
 
 const app = express();
 
@@ -8,6 +9,7 @@ app.use(morgan('common'));
 app.use(express.json());
 
 app.use('/registrations', registrationRoutes);
+app.use('/monitors', monitorRoutes)
 
 app.use(function (err, req, res, next) {
     console.error(err.stack);
