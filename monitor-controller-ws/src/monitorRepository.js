@@ -1,6 +1,5 @@
 const monitorIdToUrlMap = {
-    1: 'http://monitor-1',
-    2: 'http://monitor-2'
+    1: 'http://localhost:3001'
 }
 
 // TODO: Have Monitor Class to return not create json on each return

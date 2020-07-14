@@ -19,8 +19,7 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
     * [x] Error if trying to add monitor already added
 * [x] Implement GET endpoint for '/registrations' of monitor-controller-ws
 * [x] Implement GET endpoint for '/registrations/:id' of monitor-controller-ws
-* [ ] Implement GET endpoint for '/monitors' of monitor-controller-ws
-* [ ] Implement underlying REST calls for GET '/monitors' of monitor-controller-ws
+* [x] Implement GET endpoint for '/monitors' of monitor-controller-ws
 * [ ] Implement GET endpoint for '/monitors/:id' of monitor-controller-ws
 * [ ] Implement underlying REST calls for GET '/monitors/:id' of monitor-controller-ws
 * [ ] Implement PATCH endpoint for '/monitors' of monitor-controller-ws
