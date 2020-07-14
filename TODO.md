@@ -20,7 +20,7 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
 * [x] Implement GET endpoint for '/registrations' of monitor-controller-ws
 * [x] Implement GET endpoint for '/registrations/:id' of monitor-controller-ws
 * [x] Implement GET endpoint for '/monitors' of monitor-controller-ws
-* [ ] Implement GET endpoint for '/monitors/:id' of monitor-controller-ws
+* [x] Implement GET endpoint for '/monitors/:id' of monitor-controller-ws
 * [ ] Implement underlying REST calls for GET '/monitors/:id' of monitor-controller-ws
 * [ ] Implement PATCH endpoint for '/monitors' of monitor-controller-ws
 * [ ] Implement underlying REST calls for PATCH '/monitors' of monitor-controller-ws
@@ -29,4 +29,5 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
     * [ ] If not online remove from repo
 * [ ] Implement ability to add status codes in Error class???
 * [ ] Added Testing!!!
+* [ ] Better error handling / response codes for error conditions
 * [ ] Create frontend GUI **(OPTIONAL)** vs. MACRO Button...? 

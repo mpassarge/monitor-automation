@@ -5,6 +5,7 @@ router.get('/', (req, res) => {
     res.json(repository.getAllMonitors());
 });
 
+//TODO: why does this exist...???? revisit.
 router.get('/:id', (req, res) => {
     res.json(repository.getMonitorById(req.params.id));
 });
