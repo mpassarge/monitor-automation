@@ -2,6 +2,7 @@ const axios = require('axios');
 const router = require('express').Router();
 const repository = require('../monitorRepository');
 
+//TODO: Possibly remove...
 router.get('/', async (req, res, next) => {
     const monitors = repository.getAllMonitors();
     axios.all(monitors.map(m => axios.get(m.monitorUrl + "/monitor")))

@@ -9,7 +9,7 @@ app.use(morgan('common'));
 app.use(express.json());
 
 app.use('/registrations', registrationRoutes);
-app.use('/monitors', monitorRoutes)
+app.use('/monitors', monitorRoutes); // TODO: Might remove.. Revisit
 
 app.use(function (err, req, res, next) {
     console.error(err.stack);

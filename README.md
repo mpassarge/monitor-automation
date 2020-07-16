@@ -107,3 +107,129 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
     }
 }
 ```
+
+**Definition** `POST /configurations`
+
+```json
+{
+    "name": "hybrid",
+    "enabled": false,
+    "configuration": [
+        {
+            "monitorId": 1,
+            "source": "mDisplayPort1"
+        },
+        {
+            "monitorId": 3,
+            "source": "HDMI2"
+        }
+    ]
+}
+```
+
+**Response**
+- `201 Created ` on success
+'/configurations/2314'
+
+**Definition** `GET /configurations`
+
+```json
+[
+    {
+        "id": "1234",
+        "name": "work",
+        "enabled": true,
+        "configuration": [
+            {
+                "monitorId": 1,
+                "source": "HDMI 1"
+            },
+            {
+                "monitorId": 2,
+                "source": "HDMI 2"
+            }
+        ]
+    },
+    {
+        "id": "4321",
+        "name": "personal",
+        "enabled": false,
+        "configuration": [
+            {
+                "monitorId": 1,
+                "source": "DisplayPort1"
+            },
+            {
+                "monitorId": 2,
+                "source": "DisplayPort1"
+            },
+                        {
+                "monitorId": 3,
+                "source": "DisplayPort1"
+            }
+        ]
+    },
+    {
+        "id": "2314",
+        "name": "hybrid",
+        "enabled": false,
+        "configuration": [
+            {
+                "monitorId": 1,
+                "source": "mDisplayPort1"
+            },
+            {
+                "monitorId": 3,
+                "source": "HDMI2"
+            }
+        ]
+    }
+]
+```
+
+**Definition** `GET /configurations/1234`
+
+**Response** 
+- `200 OK ` on success
+
+```json
+{
+    "id": "1234"
+    "name": "work",
+    "enabled": true,
+    "configuration": [
+        {
+            "monitorId": 1,
+            "source": "HDMI 1"
+        },
+        {
+            "monitorId": 2,
+            "source": "HDMI 2"
+        }
+    ]
+}
+```
+
+**Definition** `PUT /configuration/4321/enable`
+
+```json
+{
+    "id": "4321",
+    "name": "personal",
+    "enabled": true,
+    "configuration": [
+        {
+            "monitorId": 1,
+            "source": "DisplayPort1"
+        },
+        {
+            "monitorId": 2,
+            "source": "DisplayPort1"
+        },
+                    {
+            "monitorId": 3,
+            "source": "DisplayPort1"
+        }
+    ]
+}
+```
