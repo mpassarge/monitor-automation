@@ -16,6 +16,9 @@ exports.addConfiguration = function(name, monitorConfiguration, enabled){
 };
 
 exports.getAllConfigurations = function() {
-    console.log(configurations);
     return configurations;
+};
+
+exports.getConfigurationByName = function(name) {
+    return configurations.find(e => e.name === name);
 };

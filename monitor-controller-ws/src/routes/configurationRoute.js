@@ -19,4 +19,13 @@ router.get('/', (req, res) => {
     res.json(repository.getAllConfigurations());
 });
 
+router.get('/:name', (req, res) => {
+    const configuration = repository.getConfigurationByName(req.params.name);
+    if(configuration) {
+        return res.json(repository.getConfigurationByName(req.params.name));
+    } else {
+        return res.status(404).send();
+    }
+});
+
 module.exports = router;
