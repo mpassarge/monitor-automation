@@ -1,8 +1,8 @@
-const configurations = {};
+const configurations = [];
 
 exports.addConfiguration = function(name, monitorConfiguration, enabled){
 
-    if(configurations[name]) {
+    if(configurations.some(e => e['name']===name)) {
         throw new Error("Configuration already added.");
     }
 
@@ -11,6 +11,11 @@ exports.addConfiguration = function(name, monitorConfiguration, enabled){
         enabled: enabled,
         configuration: monitorConfiguration
     }
-    configurations[name] = config;
+    configurations.push(config);
     return config;
-}
+};
+
+exports.getAllConfigurations = function() {
+    console.log(configurations);
+    return configurations;
+};

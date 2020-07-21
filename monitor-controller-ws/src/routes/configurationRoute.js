@@ -14,4 +14,8 @@ router.post('/', (req, res, next) => {
     }
 });
 
+router.get('/', (req, res) => {
+    res.json(repository.getAllConfigurations());
+});
+
 module.exports = router;
