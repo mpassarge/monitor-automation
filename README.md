@@ -128,14 +128,13 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 
 **Response**
 - `201 Created ` on success
-'/configurations/2314'
+'/configurations/hybrid'
 
 **Definition** `GET /configurations`
 
 ```json
 [
     {
-        "id": "1234",
         "name": "work",
         "enabled": true,
         "configuration": [
@@ -150,7 +149,6 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
         ]
     },
     {
-        "id": "4321",
         "name": "personal",
         "enabled": false,
         "configuration": [
@@ -169,7 +167,6 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
         ]
     },
     {
-        "id": "2314",
         "name": "hybrid",
         "enabled": false,
         "configuration": [
@@ -186,14 +183,13 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 ]
 ```
 
-**Definition** `GET /configurations/1234`
+**Definition** `GET /configurations/work`
 
 **Response** 
 - `200 OK ` on success
 
 ```json
 {
-    "id": "1234"
     "name": "work",
     "enabled": true,
     "configuration": [
@@ -209,11 +205,10 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 }
 ```
 
-**Definition** `PUT /configuration/4321/enable`
+**Definition** `PUT /configuration/personal/enable`
 
 ```json
 {
-    "id": "4321",
     "name": "personal",
     "enabled": true,
     "configuration": [

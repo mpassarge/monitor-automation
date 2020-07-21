@@ -8,6 +8,7 @@ router.post('/', (req, res, next) => {
     const enabled = false;
     try {
         const addedConfiguration = repository.addConfiguration(name, configuration, enabled);
+        //TODO: Send location of newly created configuration
         return res.json(addedConfiguration);
     } catch (err){
         return next(err);
