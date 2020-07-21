@@ -21,11 +21,11 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
 * [x] Implement GET endpoint for '/registrations/:id' of monitor-controller-ws
 * [x] Implement GET endpoint for '/monitors' of monitor-controller-ws
 * [x] Implement GET endpoint for '/monitors/:id' of monitor-controller-ws
-* [x] Implement underlying REST calls for GET '/monitors/:id' of monitor-controller-ws\
+* [x] Implement underlying REST calls for GET '/monitors/:id' of monitor-controller-ws
 * ~~[ ] Implement PATCH endpoint for '/monitors' of monitor-controller-ws~~
-* ~~[ ] Implement underlying REST calls for PATCH '/monitors' of monitor-controller-ws~~\
+* ~~[ ] Implement underlying REST calls for PATCH '/monitors' of monitor-controller-ws~~
 * [x] Come up with configuration resource model
-* [ ] Implement POST endpoint for '/configurations/:id' of monitor-controller-ws
+* [x] Implement POST endpoint for '/configurations/:id' of monitor-controller-ws
 * [ ] Implement GET endpoint for '/configurations' of monitor-controller-ws
 * [ ] Implement GET endpoint for '/configurations/:id' of monitor-controller-ws
 * [ ] Implement PUT endpoint for '/configurations/:id/enable' of monitor-controller-ws

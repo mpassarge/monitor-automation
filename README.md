@@ -113,7 +113,6 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 ```json
 {
     "name": "hybrid",
-    "enabled": false,
     "configuration": [
         {
             "monitorId": 1,
