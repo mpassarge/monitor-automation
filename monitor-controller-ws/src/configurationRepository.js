@@ -1,24 +1,25 @@
-const configurations = [];
+const monitorConfigurations = {
+    "enabled": "",
+    "configurations": []
+};
 
-exports.addConfiguration = function(name, monitorConfiguration, enabled){
+exports.addConfiguration = function(name, monitorConfiguration){
 
-    if(configurations.some(e => e['name']===name)) {
+    if(monitorConfigurations.configurations.some(e => e['name']===name)) {
         throw new Error("Configuration already added.");
     }
 
     const config = {
         name: name,
-        enabled: enabled,
-        configuration: monitorConfiguration
+        monitors: monitorConfiguration
     }
-    configurations.push(config);
-    return config;
+    monitorConfigurations.configurations.push(config);
 };
 
 exports.getAllConfigurations = function() {
-    return configurations;
+    return monitorConfigurations;
 };
 
 exports.getConfigurationByName = function(name) {
-    return configurations.find(e => e.name === name);
+    return monitorConfigurations.configurations.find(e => e.name === name);
 };

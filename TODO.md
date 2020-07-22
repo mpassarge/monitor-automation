@@ -28,7 +28,7 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
 * [x] Implement POST endpoint for '/configurations/:id' of monitor-controller-ws
 * [x] Implement GET endpoint for '/configurations' of monitor-controller-ws
 * [x] Implement GET endpoint for '/configurations/:name' of monitor-controller-ws
-* [ ] Implement PUT endpoint for '/configurations/:name/enable' of monitor-controller-ws
+* [ ] Implement PATCH endpoint for '/configurations/enable?name=:name' of monitor-controller-ws
 * [ ] Implement PUT endpoint for '/configurations/:name' of monitor-controller-ws
 * [ ] Implement serialization of configurations for monitor-controller-ws
 * [ ] Implement error handling middleware for monitor-ws

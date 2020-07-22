@@ -113,7 +113,7 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 ```json
 {
     "name": "hybrid",
-    "configuration": [
+    "monitors": [
         {
             "monitorId": 1,
             "source": "mDisplayPort1"
@@ -133,54 +133,55 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 **Definition** `GET /configurations`
 
 ```json
-[
-    {
-        "name": "work",
-        "enabled": true,
-        "configuration": [
-            {
-                "monitorId": 1,
-                "source": "HDMI 1"
-            },
-            {
-                "monitorId": 2,
-                "source": "HDMI 2"
-            }
-        ]
-    },
-    {
-        "name": "personal",
-        "enabled": false,
-        "configuration": [
-            {
-                "monitorId": 1,
-                "source": "DisplayPort1"
-            },
-            {
-                "monitorId": 2,
-                "source": "DisplayPort1"
-            },
-                        {
-                "monitorId": 3,
-                "source": "DisplayPort1"
-            }
-        ]
-    },
-    {
-        "name": "hybrid",
-        "enabled": false,
-        "configuration": [
-            {
-                "monitorId": 1,
-                "source": "mDisplayPort1"
-            },
-            {
-                "monitorId": 3,
-                "source": "HDMI2"
-            }
-        ]
-    }
-]
+{
+    "enabled": "work",
+    "configurations": 
+    [
+        {
+            "name": "work",
+            "monitors": [
+                {
+                    "monitorId": 1,
+                    "source": "HDMI 1"
+                },
+                {
+                    "monitorId": 2,
+                    "source": "HDMI 2"
+                }
+            ]
+        },
+        {
+            "name": "personal",
+            "monitors": [
+                {
+                    "monitorId": 1,
+                    "source": "DisplayPort1"
+                },
+                {
+                    "monitorId": 2,
+                    "source": "DisplayPort1"
+                },
+                            {
+                    "monitorId": 3,
+                    "source": "DisplayPort1"
+                }
+            ]
+        },
+        {
+            "name": "hybrid",
+            "monitors": [
+                {
+                    "monitorId": 1,
+                    "source": "mDisplayPort1"
+                },
+                {
+                    "monitorId": 3,
+                    "source": "HDMI2"
+                }
+            ]
+        }
+    ]
+}
 ```
 
 **Definition** `GET /configurations/work`
@@ -191,8 +192,7 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 ```json
 {
     "name": "work",
-    "enabled": true,
-    "configuration": [
+    "monitors": [
         {
             "monitorId": 1,
             "source": "HDMI 1"
@@ -205,25 +205,7 @@ Using ddcutil to control commands from PI to monitors [ddcutil docs](https://www
 }
 ```
 
-**Definition** `PUT /configuration/personal/enable`
+**Definition** `PATCH /configurations/enable?name=personal`
 
-```json
-{
-    "name": "personal",
-    "enabled": true,
-    "configuration": [
-        {
-            "monitorId": 1,
-            "source": "DisplayPort1"
-        },
-        {
-            "monitorId": 2,
-            "source": "DisplayPort1"
-        },
-                    {
-            "monitorId": 3,
-            "source": "DisplayPort1"
-        }
-    ]
-}
-```
+**Response**
+= `204 No Content` on success
