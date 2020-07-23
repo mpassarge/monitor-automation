@@ -14,6 +14,15 @@ router.get('/:name', (req, res) => {
     }
 });
 
+router.patch('/enable', (req, res, next) => {
+    try {
+        repository.updateEnabledConfiguration(req.query.name);
+        res.status(200).send();
+    } catch(err) {
+        next(err);
+    }
+});
+
 router.post('/', (req, res, next) => {
     //TODO: Validate req.body against configuration
     const name = req.body.name;
