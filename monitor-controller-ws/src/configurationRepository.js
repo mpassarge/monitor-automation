@@ -30,13 +30,13 @@ exports.updateEnabledConfiguration = function(name) {
 
     const monitorConfiguration = monitorConfigurations.configurations.find(e => e.name === name);
 
-    if(monitorConfigurations.enabled === name) {
-        throw new Error(`Monitor Configuration ${name} already enabled`);
-    }
-
     if(!monitorConfiguration) {
         // TODO: Should be 404
         throw new Error(`Monitor Configuration '${name}' not found`);
+    }
+    
+    if(monitorConfigurations.enabled === name) {
+        throw new Error(`Monitor Configuration ${name} already enabled`);
     }
 
     // TODO: Update each individual monitor-ws in matching configuration
