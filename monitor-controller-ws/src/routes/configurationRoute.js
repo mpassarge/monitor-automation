@@ -17,9 +17,9 @@ router.get('/:name', (req, res) => {
 router.patch('/enable', (req, res, next) => {
     try {
         repository.updateEnabledConfiguration(req.query.name);
-        res.status(200).send();
+        return res.status(200).send();
     } catch(err) {
-        next(err);
+        return next(err);
     }
 });
 

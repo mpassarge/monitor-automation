@@ -29,6 +29,7 @@ routes.patch('/', (req, res) => {
             monitorControl.updateSource(configuration.source);
         }
     } catch(err) {
+        
         res.status(500).json({ message: err.message });
         return;
     }
