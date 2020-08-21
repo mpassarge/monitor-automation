@@ -1,6 +1,4 @@
 
-Creating a Python Flask Web Service for controlling different "Profiles" of a given Monitor set up:
-
 * [x] Create Initial express app with single hello world endpoint
 * [ ] Create POC for running bash command from a given endpoint call
 * [x] Architect the API for monitor-ws
@@ -30,7 +28,6 @@ Creating a Python Flask Web Service for controlling different "Profiles" of a gi
 * [x] Implement GET endpoint for '/configurations/:name' of monitor-controller-ws
 * [x] Implement PATCH endpoint for '/configurations/enable?name=:name' of monitor-controller-ws
 * [x] Implement PATCH endpoint calling other backend apis
-* [ ] Implement PUT endpoint for '/configurations/:name' of monitor-controller-ws
 * [ ] Implement serialization of configurations for monitor-controller-ws
 * [ ] Implement error handling middleware for monitor-ws
 * [ ] Revisit /monitors of monitor-controler-ws (Might useless and can be removed.)
